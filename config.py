@@ -8,6 +8,6 @@ DEBUG = True
 
 # Connect to the database
 
-
+import config_personal
 # TODO IMPLEMENT DATABASE URL
-SQLALCHEMY_DATABASE_URI = '<Put your local database url>'
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:{}@localhost:5432/cd0046'.format(config_personal.password)
